@@ -1,0 +1,20 @@
+{
+  "main": "index_resizer.html",
+  "name": "HiperPads 2.0",
+  "description": "demo app of node-webkit",
+  "version": "0.0.1",
+  "keywords": [ "demo", "node-webkit" ],
+  "window": {
+    "title": "HiperPads 2.0 (alpha 1)",
+    "icon": "logo.png",
+	"fullscreen": false,
+	"toolbar": false,
+	"resizable": true,
+	"frame": false,
+    "width": 1280,
+    "height": 720
+  },
+  "webkit": {
+    "plugin": true
+  }
+}

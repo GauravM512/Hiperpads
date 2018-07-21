@@ -1,0 +1,66 @@
+<!--
+<element id="hiper_*"/> = CONSTANT CONTENT
+<element id="theme_*"/> = VARIABLE THEME CONTENT
+-->
+<!DOCTYPE html>
+<html>
+	<head>
+		<script type="text/javascript" src="js/jquery.min.js"></script>
+		<meta charset="UTF-8">
+		<title id="title"></title>
+		<link rel="stylesheet" href="./css/style.css">
+	</head>
+	<body>
+		<div id="loading" onclick="openSongsPath()">
+			CARREGANDO...<br>
+			Salve suas unipacks em "%localappdata%/Hiperpads 2.0/songs/".<br>
+			Caso a pasta não exita, crie.<br>
+		</div>
+		<main id="content">
+			<div id="print"></div>
+			<div id="theme_background" class="content">
+				<div class="controls">
+					<div>
+						<input type="checkbox" id="options_led" checked="checked"><label onclick="options_led()" class="buttonToggle" for="options_led" style="background-color:#00ff00">LED</label>
+					</div>
+					<div id="autoplayDiv">
+						<input type="checkbox" id="options_autoplay"><label onclick="options_autoplay()" class="buttonToggle" for="options_autoplay">AUTOPLAY</label>
+						<input type="range" id="autoplay_range" style="display:none" min="0" step="1" value="0" disabled="disabled">
+						<br>
+					</div>
+					<div id="aprenderDiv" style="position:absolute;left:-100%;top:-100%;">
+						<input type="checkbox" id="options_aprender"><label onclick="options_aprender()" class="buttonToggle" for="options_aprender">APRENDER</label>
+						<input type="range" id="aprender_range" style="display:none" min="0" step="1" value="0" disabled="disabled">
+						<br>
+					</div>
+					<div id="fakeplayDiv">
+						<input type="checkbox" id="options_fakeplay"><label onclick="options_fakeplay()" class="buttonToggle" for="options_fakeplay">FAKE PLAY</label>
+						<input type="range" id="fakeplay_range" style="display:none" min="0" step="1" value="0" disabled="disabled">
+						<br>
+					</div>
+					<div id="replayDiv">
+						<input type="checkbox" id="options_replay"><label onclick="options_replay()" class="buttonToggle" for="options_replay">REPETIR</label>
+						<br>
+					</div>
+					<div>
+						<label class="buttonToggle" style="background-color: #00ff00;">VOLUME</label>
+						<input type="range" id="volume_range" min="0" max="1" step="any" value="1" onchange="changeAudioVolume(this.value);" oninput="changeAudioVolume(this.value);">
+						<br>
+					</div>
+					<div>
+						<label class="buttonToggle" style="background-color: #00ff00;" onclick="window.location.href='index.html'">ALTERAR MÚSICA</label>
+						<br>
+					</div>
+					<!--div>
+						<button onclick="configKeyboardButtonT0();">CONFIGURAR TECLADO TAB-0</button>
+						<button onclick="configKeyboardButtonT1();">CONFIGURAR TECLADO TAB-1</button>
+						<button onclick="configKeyboardButtonT0_1();">CONFIGURAR TECLADO T1+T2</button>
+					</div-->
+				</div>
+				<div class="pads" id="htmlpads"></div>
+				<div class="chains" id="htmlchains"></div>
+			</div>
+		</main>
+		<script type="text/javascript" src="js/core.js"></script>
+	</body>
+</html>

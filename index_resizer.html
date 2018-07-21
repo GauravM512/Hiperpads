@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<link rel="stylesheet" type="text/css" href="css/resizer.css">
+	</head>
+	<body>
+		<header id="barhover">
+			<div class="bar" id="bar">
+				<div class="leftActionButtons">
+					<span onclick="winclose()" class="circle red"></span>
+					<span onclick="winminimize()" class="circle orange"></span>
+					<span id="maxmin" onclick="maxmin()" class="circle green"></span>
+				</div>
+				<div class="rightActionButtons">
+					<div onclick="togglefullscreen()"><img src="./assets/icons/fullscreen.svg" width="16"></div>
+				</div>
+				<h1 class="programTitle">HiperPads v2.0 alpha 3</h1>
+			</div>
+		</header>
+		<main>
+			<div id="maincontent">
+				<iframe id="content" src="index.html" frameborder="no" scrolling="no"></iframe>
+			</div>
+		</main>
+		<script type="text/javascript" src="js/resizer.js"></script>
+	</body>
+</html>
